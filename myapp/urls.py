@@ -8,6 +8,7 @@ urlpatterns = [
   path('function/', views.function_view, name='function_view'),
   path('class/', views.ClassView.as_view(), name='class_view'),
   path('coding/', views.Coding_view, name='coding_view'),
+  path('theme/', views.ThemeView.as_view(), name='theme'),
   
 ]
 
