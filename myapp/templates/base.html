@@ -56,6 +56,14 @@
         </div>
     </nav>
 
+  <div class="container">
+      {% if request.COOKIES.theme %}
+          <span class="text-muted float-right font-italic">The current theme is {{ request.COOKIES.theme|title }}. <a href="/theme">Switch Theme</a></span>
+      {% else %}
+          <span class="text-muted float-right font-italic">No theme selected. <a href="/theme">Set Theme</a></span>
+      {% endif %}
+  </div>
+
     <main class="container mt-4">
         {% block content %}
         {% endblock %}
